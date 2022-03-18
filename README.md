@@ -10,7 +10,8 @@ A collection of math-related game that can be played.
 
 > Try to guess a number! You have ten tries to guess. Will you make it?
 
----
+<br/><br/>
+--
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
