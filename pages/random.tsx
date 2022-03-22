@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import AnimatedNumber from "animated-number-react";
 import Link from 'next/link';
 
 // styles
@@ -22,8 +21,6 @@ const Random = () => {
         break;
     }
   }
-
-  const formatValue = (number: any) => `${Number(number).toFixed(0)}`;
 
   return (
     <div className='bg-slate-900 text-white h-screen'>
@@ -48,11 +45,7 @@ const Random = () => {
           <button onClick={(e) => handleRandomNumber(6)} className={Button}>6 Digits</button>
         </div>
         <h1 className='pt-28 text-center text-6xl sm:text-7xl text-yellow-200'>
-          <AnimatedNumber
-            value={number}
-            formatValue={formatValue}
-            duration={300}
-          />
+          {number}
         </h1>
         <h1 className='py-4 text-center text-2xl h-16'>
           {number === 77 ? 'Nice! a double seven' 
