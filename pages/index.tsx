@@ -29,8 +29,8 @@ const Home: NextPage = () => {
             </a>
           </Link>
 
-          <Link href="/guessing">
-            <a href="https://nextjs.org/learn" className={styles.card}>
+          <Link href="/guess">
+            <a className={styles.card}>
               <h2>Guess &rarr;</h2>
               <p>Guess a number!</p>
             </a>
