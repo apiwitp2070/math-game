@@ -1,3 +1,18 @@
+# Math Game
+
+A collection of math-related game that can be played.
+
+### Random a Number
+
+> Randomly generated two, three or six digit number with a single click. And mabye go buy a lottery, I guess?
+
+### Guess a Number
+
+> Try to guess a number! You have ten tries to guess. Will you make it?
+
+<br/><br/>
+--
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
