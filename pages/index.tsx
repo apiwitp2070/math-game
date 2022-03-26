@@ -44,15 +44,12 @@ const Home: NextPage = () => {
             <p>Calculator. Just a very simple calculator.</p>
           </a>
 
-          <a
-            href="/threes"
-            className={styles.card}
-          >
-            <h2>THR3ES &rarr;</h2>
-            <p>
-              3 Cards, 3 Numbers. Pick them in order and become the big one.
-            </p>
-          </a>
+          <Link href="/threes">
+            <a className={styles.card}>
+              <h2>THR3ES &rarr;</h2>
+              <p>3 cards, 3 numbers. Pick one and become the great one.</p>
+            </a>
+          </Link>
         </div>
       </main>
     </div>
