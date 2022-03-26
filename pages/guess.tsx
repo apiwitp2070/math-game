@@ -6,7 +6,6 @@ import { useState } from 'react'
 const Button = 'py-2 bg-white rounded-md hover:scale-110 transition duration-300'
 
 const Random = () => {
-  const [number, setNumber] = useState(0);
   const [answer, setAnswer] = useState(Math.floor(Math.random() * 1000));
   const [guess, setGuess] = useState('');
   const [text, setText] = useState('');
