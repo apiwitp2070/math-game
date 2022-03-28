@@ -16,9 +16,7 @@ A collection of math-related game that can be played.
 
 ### THR3ES
 
-> A math game where you need to select one smallest number out of three at a time.  
-> If corrected, Selected number will be replace with another one and you will earn a score.  
-> Try to climb for a highest score and big number as much as you can!
+> A math game where you need to select one smallest number out of three at a time. If corrected, Selected number will be replace with another one and you will earn a score. Try to climb for a highest score and big number as much as you can!
 
 <br/><br/>
 --
