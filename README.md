@@ -12,12 +12,13 @@ A collection of math-related game that can be played.
 
 ### Calculator
 
-> A simple calculator from another of my work. [`https://github.com/laevatein2070/calculator`](https://github.com/laevatein2070/calculator)
+> A simple calculator from one of my work. [`https://github.com/laevatein2070/calculator`](https://github.com/laevatein2070/calculator)
 
 ### THR3ES
 
 > A math game where you need to select one smallest number out of three at a time.  
-> If corrected, Selected number will be replace with another one and you will earn a score.
+> If corrected, Selected number will be replace with another one and you will earn a score.  
+> Try to climb for a highest score and big number as much as you can!
 
 <br/><br/>
 --
