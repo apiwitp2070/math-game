@@ -11,6 +11,7 @@ const ButtonMachine = 'text-4xl font-semibold bg-green-500 text-white rounded-md
 
 const Threes = () => {
 
+  const [howto, setShowHowto] = useState(false);
   const [machine_count, setMachineCount] = useState(0);
   const [time, setTime] = useState(Date.now() + 59000);
   const [start, setStart] = useState(false);
@@ -34,6 +35,9 @@ const Threes = () => {
   useEffect(() => {
     if (start) setTime(Date.now() + 59000);
   }, [start]);
+  useEffect(() => {
+    setShowHowto(true);
+  }, []);
 
   const handleStart = (e: any) => {
     setNumber(init);
@@ -127,6 +131,19 @@ const Threes = () => {
           </h1>
         </Link>
       </header>
+
+      {howto && 
+        <div className="absolute inset-y-48 flex justify-center min-w-full">
+          <div className="bg-white relative p-4 rounded-md text-center">
+            <p className="text-4xl font-semibold mb-4">How to Play</p>
+            <p>Three numbers will br presented on the screen. Select smallest one will earn you a score and that number will be replace with another higher number.</p>
+            <p className="mt-4">There will be some powerups to help you gain higher score:</p>
+            <p>Critical : critical may occur at a fix chance, Indicate as a red card. Click it to drastically boost the number value.</p>
+            <p>Machine Gun: Indicate as green card; You can click it for a total of 10 times. Each time clicked will also increase number value of all card.</p>
+            <button className="mt-24 border border-black hover:border-red-500 hover:text-red-500 rounded-sm px-4 py-1" onClick={() => setShowHowto(false)}>Close</button>
+          </div>
+        </div>
+      }
 
       <main>
         <h1 className="text-9xl p-20 text-white text-center">
