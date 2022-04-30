@@ -37,7 +37,7 @@ const Home: NextPage = () => {
           </Link>
 
           <a
-            href="https://laevatein2070.github.io/calculator/"
+            href="https://apiwitp2070.github.io/calculator/"
             className={styles.card}
           >
             <h2>Calculator &rarr;</h2>
