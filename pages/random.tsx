@@ -24,7 +24,7 @@ const Random = () => {
   }
 
   return (
-    <div className='bg-slate-900 h-screen'>
+    <div className='bg-slate-900 text-white h-screen'>
       <Head>
         <title>Random Number</title>
         <link rel="icon" href="/favicon.ico" />
@@ -33,7 +33,7 @@ const Random = () => {
       <HomeBtn/>
 
       <main className='mx-8'>
-        <h1 className='py-16 font-semibold text-white text-4xl text-center'>RNG</h1>
+        <h1 className='py-16 font-semibold text-4xl text-center'>RNG</h1>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 text-black max-w-lg mx-auto'>
           <button onClick={(e) => handleRandomNumber(2)} className={Button}>2 Digits</button>
           <button onClick={(e) => handleRandomNumber(3)} className={Button}>3 Digits</button>
