@@ -1,6 +1,7 @@
 # Math Game
 
-A collection of math-related game that can be played.
+Collection of math-related game that can be played.  
+A Purpose of this project is to learn about how to use an arithmetic function in JavaScript.
 
 ### Random a Number
 
