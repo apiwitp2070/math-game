@@ -1,52 +1,55 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+const Card = 'bg-white rounded-md p-4 h-32 hover:text-blue-500';
+const Title = 'font-semibold mb-2';
+
+const Home = () => {
   return (
-    <div className={styles.container}>
+    <div className='bg-slate-700'>
       <Head>
         <title>Math Game</title>
-        <meta name="description" content="Wanna play some math games?" />
+        <meta name="description" content="A collection of maths" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Math Game!
+      <main className='min-h-screen p-8 flex-1 flex-col justify-center'>
+        <h1 className='text-white text-6xl text-center'>
+          Math Game
         </h1>
 
-        <p className={styles.description}>
-          A collection of math game
+        <p className='text-white text-2xl text-center my-16'>
+          Select one below to try it out
         </p>
 
-        <div className={styles.grid}>
+        <div className='mx-auto max-w-2xl grid grid-cols-1 md:grid-cols-2 gap-8'>
           <Link href="/random" passHref>
-            <a className={styles.card}>
-              <h2>Random &rarr;</h2>
-              <p>Generating a random value ...Mabye for a lottery?</p>
+            <a className={Card}>
+              <h2 className={Title}>Random &rarr;</h2>
+              <p>Generating a random value ...Mabye using it to buy a lottery?</p>
             </a>
           </Link>
 
           <Link href="/guess">
-            <a className={styles.card}>
-              <h2>Guess &rarr;</h2>
+            <a className={Card}>
+              <h2 className={Title}>Guess &rarr;</h2>
               <p>Guess a number!</p>
             </a>
           </Link>
 
           <a
             href="https://apiwitp2070.github.io/calculator/"
-            className={styles.card}
+            target='_blank'
+            rel='noopener noreferrer'
+            className={Card}
           >
-            <h2>Calculator &rarr;</h2>
+            <h2 className={Title}>Calculator &rarr;</h2>
             <p>Calculator. Just a very simple calculator.</p>
           </a>
 
           <Link href="/threes">
-            <a className={styles.card}>
-              <h2>THR3ES &rarr;</h2>
+            <a className={Card}>
+              <h2 className={Title}>THR3ES &rarr;</h2>
               <p>3 cards, 3 numbers. Pick one and become the great one.</p>
             </a>
           </Link>
@@ -56,4 +59,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Home;
