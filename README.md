@@ -1,6 +1,7 @@
 # Math Game
 
-A collection of math-related game that can be played.
+Collection of math-related game that can be played.  
+A Purpose of this project is to learn about how to use an arithmetic function in JavaScript.
 
 ### Random a Number
 
@@ -12,7 +13,7 @@ A collection of math-related game that can be played.
 
 ### Calculator
 
-> A simple calculator from one of my work. [`https://github.com/laevatein2070/calculator`](https://github.com/laevatein2070/calculator)
+> A simple calculator from one of my work. [`https://github.com/apiwitp2070/calculator`](https://github.com/apiwitp2070/calculator)
 
 ### THR3ES
 
