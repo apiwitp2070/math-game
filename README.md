@@ -12,7 +12,7 @@ A collection of math-related game that can be played.
 
 ### Calculator
 
-> A simple calculator from one of my work. [`https://github.com/laevatein2070/calculator`](https://github.com/laevatein2070/calculator)
+> A simple calculator from one of my work. [`https://github.com/apiwitp2070/calculator`](https://github.com/apiwitp2070/calculator)
 
 ### THR3ES
 
