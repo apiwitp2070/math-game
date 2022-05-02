@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link';
 import { useState } from 'react'
-
-// styles
-const Button = 'py-2 bg-white rounded-md hover:scale-110 transition duration-300'
+import HomeBtn from './components/HomeButton';
 
 const Random = () => {
   const [answer, setAnswer] = useState(Math.floor(Math.random() * 1000));
@@ -49,7 +47,6 @@ const Random = () => {
     else if (num < 5) setText('Oh? Again?');
     else if (num < 8) setText('Go Go Go!');
     else setText('You can do it!');
-    console.log(num);
   }
 
   return (
@@ -59,13 +56,7 @@ const Random = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className='p-4'>
-        <Link href={'/'} passHref>
-          <h1 className='text-2xl hover:text-yellow-200 hover:translate-x-1 transition duration-300'>
-            Home
-          </h1>
-        </Link>
-      </header>
+      <HomeBtn/>
 
       <main>
         <h1 className='uppercase pt-12 pb-8 font-semibold text-4xl text-center'>Guess a Number</h1>
@@ -79,9 +70,10 @@ const Random = () => {
               }
             }}
             disabled = {correct ? true : remain > 0 ? false : true}
-            onKeyDown={(e) => handleKeyDown(e, parseInt(guess))} 
-            onChange={(e) => setGuess(e.target.value)} 
+            onKeyDown={(e) => handleKeyDown(e, parseInt(guess))}
+            onChange={(e) => setGuess(e.target.value)}
             value={guess}
+            placeholder={correct || remain <= 0 ? 'Please click Reset button' : 'Enter a number (0-1000)'}
             className='my-4 rounded-md focus:outline-none bg-none text-black text-center px-2 py-1'>
           </input>
           <h1 className='text-center pt-4'>Remaining Attempts:</h1>
@@ -91,8 +83,8 @@ const Random = () => {
           <button 
             onClick={handleReset}
             className={correct 
-              ? 'rounded-md bg-white text-black' :remain > 0 
-              ? 'hidden' : 'rounded-md bg-white text-black'}
+              ? 'rounded-md bg-white text-black active:scale-90' :remain > 0 
+              ? 'hidden' : 'rounded-md bg-white text-black active:scale-90'}
           >
             Reset
           </button>
