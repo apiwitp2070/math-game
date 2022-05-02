@@ -2,12 +2,13 @@ import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Countdown from 'react-countdown';
+import HomeBtn from "./components/HomeButton";
 
 // styles
-const StartButton = 'text-4xl font-semibold bg-white border border-white rounded-md text-black py-12 px-10 transition duration-300 hover:text-white hover:bg-slate-900 hover:-translate-y-6 hover:border-yellow-300 active:scale-90';
-const Button = 'text-4xl font-semibold bg-white rounded-md text-black py-12 transition duration-300 active:duration-100 hover:-translate-y-2 hover:text-blue-600 active:scale-90';
-const ButtonCritical = 'text-4xl font-semibold bg-red-500 text-white rounded-md py-12 animate-pulse transition duration-300 active:duration-100 hover:-translate-y-2 hover:text-yellow-200 active:scale-110';
-const ButtonMachine = 'text-4xl font-semibold bg-green-500 text-white rounded-md py-12 animate-pulse transition duration-300 active:duration-100 hover:-translate-y-2 hover:text-yellow-200 active:scale-110';
+const StartButton = 'mx-4 text-4xl font-semibold bg-white border border-white rounded-md text-black py-12 px-10 transition duration-300 hover:text-white hover:bg-slate-900 hover:border-yellow-300 active:scale-90';
+const Button = 'mx-auto text-4xl font-semibold bg-white rounded-md text-black py-12 transition duration-300 active:duration-100 hover:text-blue-600 active:scale-90';
+const ButtonCritical = 'mx-auto text-4xl font-semibold bg-red-500 text-white rounded-md py-12 animate-pulse transition duration-300 active:duration-100 hover:text-yellow-200 active:scale-110';
+const ButtonMachine = 'mx-auto text-4xl font-semibold bg-green-500 text-white rounded-md py-12 animate-pulse transition duration-300 active:duration-100 hover:text-yellow-200 active:scale-110';
 
 const Threes = () => {
 
@@ -81,7 +82,7 @@ const Threes = () => {
       newNumbers[2].value = select + Math.floor(Math.random() * (count + 99 - 10 + 1) ) + 10;
       setNumber(newNumbers);
       setHigh(select);
-      if (machine_count == 10) {
+      if (machine_count == 9) {
         newNumbers[id].machine = false;
         setMachineCount(0);
       }
@@ -124,23 +125,18 @@ const Threes = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className='p-4'>
-        <Link href={'/'} passHref>
-          <h1 className='text-2xl text-white hover:text-yellow-200 hover:translate-x-1 transition duration-300'>
-            Home
-          </h1>
-        </Link>
-      </header>
+      <HomeBtn/>
 
       {howto && 
-        <div className="absolute inset-y-48 flex justify-center min-w-full">
+        <div className="absolute inset-y-40 md:inset-y-48 flex justify-center min-w-full">
           <div className="bg-white relative p-4 rounded-md text-center">
             <p className="text-4xl font-semibold mb-4">How to Play</p>
-            <p>Three numbers will br presented on the screen. Select smallest one will earn you a score and that number will be replace with another higher number.</p>
+            <p>Three numbers will br presented on the screen. Select smallest one will earn you a score and that number will be replaced with higher value.</p>
             <p className="mt-4">There will be some powerups to help you gain higher score:</p>
-            <p>Critical : critical may occur at a fix chance, Indicate as a red card. Click it to drastically boost the number value.</p>
-            <p>Machine Gun: Indicate as green card; You can click it for a total of 10 times. Each time clicked will also increase number value of all card.</p>
-            <button className="mt-24 border border-black hover:border-red-500 hover:text-red-500 rounded-sm px-4 py-1" onClick={() => setShowHowto(false)}>Close</button>
+            <p>Critical : May occur at a fix chance, Indicate as a red card. Click it to drastically boost all card value.</p>
+            <p>Machine Gun: Indicate as green card; You can click it for a total of 10 times. Each click will also increase number value of all card.</p>
+            <p className="mt-4">Both Critical and Machine Gun can be selected and triggered anytime regardless of number ascending condition.</p>
+            <button className="absolute bottom-4 right-4 border border-black hover:border-red-500 hover:text-red-500 rounded-sm px-4 py-1" onClick={() => setShowHowto(false)}>Close</button>
           </div>
         </div>
       }
@@ -157,8 +153,8 @@ const Threes = () => {
           /> : 60}
         </h1>
         <div className={start
-          ? "grid grid-cols-3 max-w-xl mx-auto gap-8" 
-          : "grid grid-cols-1 max-w-xl mx-auto gap-8"}>
+          ? "grid grid-cols-3 max-w-xl mx-auto" 
+          : "grid grid-cols-1 max-w-xl mx-auto"}>
           { !start?
             <button onClick={handleStart} className={StartButton}>Start</button>
             :
